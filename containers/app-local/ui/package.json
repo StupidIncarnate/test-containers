@@ -1,5 +1,5 @@
 {
-  "name": "dtos-ui",
+  "name": "ui",
   "version": "1.0.0",
   "dependencies": {
     "react": "^16.6.3",
