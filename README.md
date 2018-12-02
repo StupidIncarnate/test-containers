@@ -1,4 +1,3 @@
 To run:
+npm install
 npm run local
-
-Docker will install all the node modules
