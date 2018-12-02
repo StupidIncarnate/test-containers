@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+  container-ui:
+    build:
+      context: ./container-ui
+    container_name: container-ui
+    image: container-ui
+  ui:
+    build:
+      context: .
+      dockerfile: ./app-local/ui/Dockerfile
+    container_name: ui
+    image: ui
+    command: npm start
+    depends_on:
+      - container-ui
+
+

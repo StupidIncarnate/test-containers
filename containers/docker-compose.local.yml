@@ -1,0 +1,16 @@
+version: '3.4'
+services:
+  ui:
+    command: npm start
+    ports:
+      - '4000:4000' # expose ports - HOST:CONTAINER
+    environment:
+      - NODE_ENV=development
+      - PORT=4000
+      - CHOKIDAR_USEPOLLING=true
+      - REACT_APP_SERVER_API=http://localhost:5000
+    volumes:
+      - './app-local/ui/src:/usr/src/app/src'
+      - './app-local/ui/public:/usr/src/app/public'
+      - '/usr/src/app/node_modules'
+      - '/usr/src/node_modules'
